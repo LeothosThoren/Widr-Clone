@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //****************
+    // Initialization
+    //****************
+
     private fun init() {
         configureFragmentContent(HeaderFragment())
         configureBottomNavigationView()
@@ -32,20 +36,32 @@ class MainActivity : AppCompatActivity() {
     //****************
 
     private fun configureBottomNavigationView() {
-        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem -> updateFragments(menuItem.itemId) }
+        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
+            updateFragments(menuItem.itemId)
+        }
     }
 
+    /**
+     * @param fragment
+     * This method allow to configure dynamically a fragment to display within the activity,
+     * ruled by the bottom navigation view items
+     * */
     private fun configureFragmentContent(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.frameLayout, fragment).commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.frameLayout, fragment)
+            .commit()
     }
-
 
     //*******************
     // User Interactions
     //*******************
 
+    /**
+     * @param item
+     * The bottom navigation bar allow the user to select an item.
+     * Each items display different contents. The parameter item referrers to the menu item ids
+     * */
     private fun updateFragments(item: Int): Boolean {
         when (item) {
             R.id.action_header -> configureFragmentContent(HeaderFragment())

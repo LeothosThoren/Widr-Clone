@@ -1,12 +1,23 @@
 <resources>
+    <!-- Toolbar-->
     <string name="app_name">Widr-clone</string>
     <string name="search">search</string>
 
+    <!-- fragment text from bottom navigation view -->
     <string name="hello_header_fragment">Hello header fragment</string>
-
     <string name="hello_message_fragment">Hello message fragment</string>
-
     <string name="hello_notification_fragment">Hello notification fragment</string>
-
     <string name="hello_profile_fragment">Hello profile fragment</string>
+
+    <!--fragment text from tabLayout -->
+    <string name="hello_tab1_fragment">Hello tab1 fragment</string>
+    <string name="hello_tab2_fragment">Hello tab2 fragment</string>
+    <string name="hello_tab3_fragment">Hello tab3 fragment</string>
+
+    <!--Page adapter title-->
+    <string name="first_tab_title">All announcements</string>
+    <string name="second_tab_title">Explore offers</string>
+    <string name="third_tab_title">Find profile</string>
+
+
 </resources>
