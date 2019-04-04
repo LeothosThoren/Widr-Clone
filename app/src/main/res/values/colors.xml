@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9B9B9B</color>
+    <color name="colorPrimaryDark">#9B9B9B</color>
+    <color name="colorAccent">@android:color/white</color>
+    <color name="light_purple">#616AFF</color>
+    <color name="saphir_blue">#0714FF</color>
+    <color name="dark_green">#2685A0</color>
+    <color name="green">#26A561</color>
+    <color name="purple">#8841A9</color>
+    <color name="dark_purple">#4C147F</color>
+    <color name="deep_purple">#7C2DF5</color>
+    <color name="deep_blue">#394FF5</color>
+
+</resources>
