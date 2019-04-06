@@ -1,8 +1,12 @@
 package com.leothos.widr_clone.ui.fragments
 
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
-import com.leothos.widr_clone.base.BaseFragment
 
 
 /**
@@ -10,15 +14,16 @@ import com.leothos.widr_clone.base.BaseFragment
  * The tab layout is included inside the header fragment which corresponds to the main page of the app.
  * This fragment displays offers
  ***/
-class TabOfferFragment : BaseFragment() {
+class TabOfferFragment : Fragment() {
 
 
     fun newInstance(): TabOfferFragment {
         return TabOfferFragment()
     }
 
-    override fun getLayoutId(): Int {
-        return R.layout.fragment_tab_offer
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_tab_offer, container, false)
+        return view
     }
 
 }

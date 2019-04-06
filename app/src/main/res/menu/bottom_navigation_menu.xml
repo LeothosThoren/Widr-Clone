@@ -3,7 +3,7 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
             android:id="@+id/action_header"
-            android:icon="@drawable/ic_lightning"
+            android:icon="@drawable/ic_person_outline_grey_24dp"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>
@@ -15,19 +15,19 @@
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_add"
-            android:icon="@drawable/ic_lightning"
+            android:icon="@drawable/ic_person_outline_grey_24dp"
             app:labelVisibilityMode="unlabeled"
             android:title=""
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_notification"
-            android:icon="@drawable/ic_lightning"
+            android:icon="@drawable/ic_person_outline_grey_24dp"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_profil"
-            android:icon="@drawable/ic_lightning"
+            android:icon="@drawable/ic_person_outline_grey_24dp"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>

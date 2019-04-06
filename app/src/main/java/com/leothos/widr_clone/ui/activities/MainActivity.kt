@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             updateFragments(menuItem.itemId)
         }
+
     }
 
     /**

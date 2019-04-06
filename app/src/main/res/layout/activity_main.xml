@@ -20,7 +20,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/bottomNavigationView"
-            app:itemTextColor="@drawable/bottom_navigation_colors"
             app:itemIconTint="@drawable/bottom_navigation_colors"
             android:background="@color/colorAccent"
             app:menu="@menu/bottom_navigation_menu"

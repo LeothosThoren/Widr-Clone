@@ -1,22 +1,27 @@
 package com.leothos.widr_clone.ui.fragments
 
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
-import com.leothos.widr_clone.base.BaseFragment
 
 /**
  * This fragment is a part of of the view pager associated with tabs.
  * The tab layout is included inside the header fragment which corresponds to the main page of the app.
  * This particular fragment display a list with different features like a carousel which contains a map for example
  ***/
-class TabAnnouncementFragment : BaseFragment() {
+class TabAnnouncementFragment : Fragment() {
 
     fun newInstance(): TabAnnouncementFragment {
         return TabAnnouncementFragment()
     }
 
-    override fun getLayoutId(): Int {
-        return R.layout.fragment_tab_announcement
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_tab_announcement, container, false)
+        return view
     }
 
 }
