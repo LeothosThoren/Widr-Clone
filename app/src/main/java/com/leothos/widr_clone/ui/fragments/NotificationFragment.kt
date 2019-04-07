@@ -3,7 +3,7 @@ package com.leothos.widr_clone.ui.fragments
 import androidx.appcompat.widget.Toolbar
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.base.BaseFragment
-import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.fragment_notification.*
 
 
 class NotificationFragment : BaseFragment() {

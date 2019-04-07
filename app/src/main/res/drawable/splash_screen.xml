@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/green"/>
+    <item android:drawable="@color/colorAccent"/>
     <item>
-        <bitmap android:src="@drawable/ic_splash_icon"
+        <bitmap android:src="@drawable/sphere"
                 android:gravity="center"/>
     </item>
 </layer-list>
