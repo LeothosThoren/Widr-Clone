@@ -6,8 +6,30 @@
         android:layout_width="match_parent" android:layout_height="match_parent"
         tools:context=".ui.fragments.HeaderFragment"
         android:orientation="vertical">
+    <androidx.appcompat.widget.ContentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <include layout="@layout/toolbar"/>
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ToolbarTheme"
+                android:background="@drawable/gradient_purple_blue"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+    </androidx.appcompat.widget.ContentFrameLayout>
+
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -24,8 +46,7 @@
     <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-    />
+            android:layout_height="match_parent"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

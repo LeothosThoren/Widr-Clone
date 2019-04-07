@@ -12,7 +12,6 @@ import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.CustomPageAdapter
 import com.leothos.widr_clone.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_header.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class HeaderFragment : BaseFragment() {
 

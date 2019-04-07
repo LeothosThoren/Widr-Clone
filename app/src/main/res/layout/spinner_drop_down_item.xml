@@ -4,7 +4,8 @@
                  android:layout_width="match_parent"
                  android:layout_height="?attr/listPreferredItemHeight"
                  style="?attr/spinnerDropDownItemStyle"
-                 android:ellipsize="marquee"
+                 android:textSize="16sp"
+                 android:textStyle="bold"
                  android:background="@color/colorAccent"
                  android:textColor="@color/colorPrimaryDark">
 
