@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="@dimen/image_list_dimen"
+            android:layout_height="@dimen/image_list_dimen" tools:srcCompat="@tools:sample/avatars[0]"
+            android:id="@+id/tabAnnouncementPhoto"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:adjustViewBounds="true"
+            app:srcCompat="@mipmap/ic_launcher_round"/>
+    <TextView
+            android:text="@string/anna_mendez"
+            android:layout_width="0dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large"
+            android:id="@+id/tabAnnouncementName" app:layout_constraintStart_toEndOf="@+id/tabAnnouncementPhoto"
+            android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/tabAnnouncementPhoto"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="@string/request_to_show_18_mutual_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_link"
+            android:lines="1"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:drawableStart="@drawable/ic_account_circle_24dp"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_24dp"
+            android:id="@+id/tabAnnouncementRequest"
+            app:layout_constraintTop_toBottomOf="@+id/tabAnnouncementName"
+            app:layout_constraintStart_toEndOf="@+id/tabAnnouncementPhoto" android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+            android:textColorLink="@color/blue_link" android:textIsSelectable="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

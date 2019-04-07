@@ -19,5 +19,11 @@
     <string name="second_tab_title">Explore offers</string>
     <string name="third_tab_title">Find profile</string>
 
+    <!--Place holder text view-->
+    <string name="request_to_show_18_mutual_contact">
+        <u>Request to show 18 mutual contact</u>
+    </string>
+    <string name="anna_mendez">Anna Mendez</string>
+
 
 </resources>
