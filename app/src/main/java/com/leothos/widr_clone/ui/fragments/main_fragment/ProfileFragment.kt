@@ -1,4 +1,4 @@
-package com.leothos.widr_clone.ui.fragments
+package com.leothos.widr_clone.ui.fragments.main_fragment
 
 
 import androidx.appcompat.widget.Toolbar

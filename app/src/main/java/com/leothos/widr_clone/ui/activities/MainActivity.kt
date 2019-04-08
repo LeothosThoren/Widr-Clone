@@ -5,10 +5,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
-import com.leothos.widr_clone.ui.fragments.HeaderFragment
-import com.leothos.widr_clone.ui.fragments.MessageFragment
-import com.leothos.widr_clone.ui.fragments.NotificationFragment
-import com.leothos.widr_clone.ui.fragments.ProfileFragment
+import com.leothos.widr_clone.ui.fragments.main_fragment.HeaderFragment
+import com.leothos.widr_clone.ui.fragments.main_fragment.MessageFragment
+import com.leothos.widr_clone.ui.fragments.main_fragment.NotificationFragment
+import com.leothos.widr_clone.ui.fragments.main_fragment.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 

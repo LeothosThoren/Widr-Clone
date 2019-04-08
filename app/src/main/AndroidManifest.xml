@@ -5,6 +5,7 @@
           package="com.leothos.widr_clone">
 
     <dist:module dist:instant="true"/>
+
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -15,20 +16,19 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".ui.activities.ChatActivity">
+        </activity>
         <!-- SPLASH SCREEN ACTIVITY -->
-        <activity android:name=".ui.activities.SplashScreenActivity"
-                  android:theme="@style/SplashScreenTheme">
+        <activity
+                android:name=".ui.activities.SplashScreenActivity"
+                android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-
-        <!-- MAIN ACTIVITY -->
+        </activity> <!-- MAIN ACTIVITY -->
         <activity android:name=".ui.activities.MainActivity"/>
-
     </application>
 
 </manifest>

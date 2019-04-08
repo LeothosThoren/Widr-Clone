@@ -1,4 +1,4 @@
-package com.leothos.widr_clone.ui.fragments
+package com.leothos.widr_clone.ui.fragments.tab_fragment
 
 
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.AnnouncementItemRV
+import com.leothos.widr_clone.ui.fragments.ModalBottomFragment
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.recycler_view_include.*

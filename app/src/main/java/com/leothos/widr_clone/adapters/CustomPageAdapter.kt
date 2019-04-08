@@ -6,9 +6,9 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.formatTitle
-import com.leothos.widr_clone.ui.fragments.TabAnnouncementFragment
-import com.leothos.widr_clone.ui.fragments.TabOfferFragment
-import com.leothos.widr_clone.ui.fragments.TabProfileFragment
+import com.leothos.widr_clone.ui.fragments.tab_fragment.TabAnnouncementFragment
+import com.leothos.widr_clone.ui.fragments.tab_fragment.TabOfferFragment
+import com.leothos.widr_clone.ui.fragments.tab_fragment.TabProfileFragment
 
 
 /**
