@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="center">
+
+    <ImageView
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_law_book"
+            android:id="@+id/imageView"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="OFFER"
+            android:textColor="@color/colorAccent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:padding="5dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Avocat d'affaires"
+            android:textColor="@color/colorAccent"
+            android:textSize="28sp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:padding="5dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="à Rennes, France" android:textColor="@color/colorAccent"/>
+</LinearLayout>

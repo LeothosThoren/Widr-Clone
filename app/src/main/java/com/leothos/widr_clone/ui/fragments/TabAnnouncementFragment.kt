@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
-import com.leothos.widr_clone.adapters.AnnouncementItem
+import com.leothos.widr_clone.adapters.AnnouncementItemRV
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.recycler_view_include.*
@@ -26,7 +26,6 @@ class TabAnnouncementFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_tab_announcement, container, false)
-
         return view
     }
 
@@ -39,8 +38,8 @@ class TabAnnouncementFragment : Fragment() {
     private fun configureRecyclerView() {
         val adapter = GroupAdapter<ViewHolder>()
 
-        adapter.add(AnnouncementItem(this))
-        adapter.add(AnnouncementItem(this))
+        adapter.add(AnnouncementItemRV(this))
+        adapter.add(AnnouncementItemRV(this))
 
         recyclerview.adapter = adapter
     }

@@ -52,10 +52,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/linearLayoutCompat">
 
-        <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPagerCarousel"
+        <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"/>
+                android:layout_height="270dp"
+                app:fillColor="@color/colorAccent"
+                app:pageColor="@color/carousel_color"
+                app:radius="5dp"
+                app:autoPlay="false"
+                app:indicatorMarginVertical="10dp"
+                app:strokeColor="@color/carousel_color"
+        />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

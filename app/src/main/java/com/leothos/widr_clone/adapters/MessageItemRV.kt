@@ -10,7 +10,7 @@ import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.item_fragment_message.view.*
 
-class MessageItemAdapter(
+class MessageItemRV(
     private val messageItem: MessageItem,
     private val fragment: Fragment
 ) : Item<ViewHolder>() {

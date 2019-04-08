@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.leothos.widr_clone.R
-import com.leothos.widr_clone.adapters.MessageItemAdapter
+import com.leothos.widr_clone.adapters.MessageItemRV
 import com.leothos.widr_clone.base.BaseFragment
 import com.leothos.widr_clone.data_samples.DummyData
 import com.xwray.groupie.GroupAdapter
@@ -40,7 +40,7 @@ class MessageFragment : BaseFragment() {
 
     private fun configureRecyclerView() {
         dummyData.forEach {
-            adapter.add(MessageItemAdapter(it, this))
+            adapter.add(MessageItemRV(it, this))
         }
         recyclerview.adapter = adapter
         recyclerview.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))

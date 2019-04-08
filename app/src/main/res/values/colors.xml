@@ -13,5 +13,6 @@
     <color name="deep_blue">#394FF5</color>
     <color name="darker_white">#EBEBEB</color>
     <color name="blue_link">#7E9AF9</color>
+    <color name="carousel_color">#7F7FF8</color>
 
 </resources>
