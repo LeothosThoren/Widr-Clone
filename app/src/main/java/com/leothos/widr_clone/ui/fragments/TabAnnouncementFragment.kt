@@ -10,7 +10,7 @@ import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.AnnouncementItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.fragment_tab_announcement.*
+import kotlinx.android.synthetic.main.recycler_view_include.*
 
 /**
  * This fragment is a part of of the view pager associated with tabs.
@@ -39,10 +39,10 @@ class TabAnnouncementFragment : Fragment() {
     private fun configureRecyclerView() {
         val adapter = GroupAdapter<ViewHolder>()
 
-        adapter.add(AnnouncementItem())
-        adapter.add(AnnouncementItem())
+        adapter.add(AnnouncementItem(this))
+        adapter.add(AnnouncementItem(this))
 
-        recyclerview_tab_announcement.adapter = adapter
+        recyclerview.adapter = adapter
     }
 
 }

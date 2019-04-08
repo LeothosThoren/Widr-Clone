@@ -14,6 +14,13 @@
         <item name="android:textColorSecondary">@android:color/black</item>
     </style>
 
+    <!--Toolbar title appearance-->
+    <style name="ToolbarTheme.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAlignment">gravity</item>
+    </style>
+
     <!-- Splash screen-->
     <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
