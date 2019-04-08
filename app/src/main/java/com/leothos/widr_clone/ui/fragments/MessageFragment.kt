@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.MessageItemRV
 import com.leothos.widr_clone.base.BaseFragment
-import com.leothos.widr_clone.data_samples.DummyData
+import com.leothos.widr_clone.data.DummyData
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_message.*

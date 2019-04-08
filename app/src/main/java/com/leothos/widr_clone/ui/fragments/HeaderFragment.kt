@@ -15,11 +15,6 @@ import kotlinx.android.synthetic.main.fragment_header.*
 
 class HeaderFragment : BaseFragment() {
 
-
-//    override fun getMenuItem(): Int {
-//        return R.menu.toolbar_search
-//    }
-
     override fun getToolbar(): Toolbar {
         return toolbar
     }

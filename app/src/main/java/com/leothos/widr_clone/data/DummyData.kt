@@ -1,4 +1,4 @@
-package com.leothos.widr_clone.data_samples
+package com.leothos.widr_clone.data
 
 import com.leothos.widr_clone.models.MessageItem
 

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:clipToPadding="false"
+        tools:context=".ui.fragments.ModalBottomFragment">
+
+    <!-- First part-->
+    <include layout="@layout/item_fragment_tab_announcement_include"
+             android:id="@+id/modalUser" app:layout_constraintTop_toTopOf="parent"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="32dp" app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"/>
+    <!-- Second part-->
+    <ImageView
+            app:srcCompat="@drawable/ic_account_balance_white_24dp"
+            android:layout_width="@dimen/image_list_dimen"
+            android:layout_height="@dimen/image_list_dimen"
+            android:id="@+id/modalIcon" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/modalUser" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:background="@drawable/circle_background"
+            android:scaleType="centerInside"/>
+    <TextView
+            android:text="Droits des sociétés"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/modalTitle"
+            app:layout_constraintTop_toTopOf="@+id/modalIcon"
+            app:layout_constraintStart_toEndOf="@+id/modalIcon"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
+    <TextView
+            android:text="Aix-en-Provence"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/modalDescription"
+            app:layout_constraintStart_toEndOf="@+id/modalIcon"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/modalTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/modalIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.IconMenu.Item"/>
+
+    <!-- Send -->
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/modalDescription" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:gravity="center" android:background="@drawable/custom_background_blue"
+            android:id="@+id/linearLayout">
+        <TextView
+                android:text="Send recommendation"
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content" android:id="@+id/modalSendRecommendation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="open a chat"
+                android:textColor="@color/colorAccent"/>
+    </LinearLayout>
+    <!--Button-->
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="100"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:id="@+id/linearLayout2">
+
+        <Button
+                android:text="Share"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:drawableTint="@color/deep_blue"
+                android:textColor="@color/deep_blue"
+                android:drawableTop="@drawable/ic_upload_symbol"
+                android:layout_margin="@dimen/padding"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:id="@+id/modalButtonShare"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Time"
+                android:background="@drawable/custom_background_button"/>
+
+        <Button
+                android:text="Share to Facebook"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_margin="@dimen/padding"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_blue"
+                android:drawableTop="@drawable/ic_facebook"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:id="@+id/modalButtonFacebook"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:textAppearance="@style/TextAppearance.Compat.Notification.Time"
+                android:background="@drawable/custom_background_button"/>
+    </LinearLayout>
+
+
+    <!--Last part-->
+
+    <TextView
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modalTitleDescription" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+    />
+    <TextView
+            android:text="If you own an Iphone, you've probably already worked out how much it is to use it to watch movies-it has that nice big screen, and the sound quality is surprisingly good too. Now imagine if you knew how to download Iphone movies without having to pay."
+            android:layout_width="0dp"
+            android:maxLines="6"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:lineSpacingExtra="@dimen/drawable_padding"
+            android:layout_height="wrap_content"
+            android:id="@+id/modalContentDescription" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/modalTitleDescription"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
+
+    <TextView
+            android:text="aujourd'hui, 8h44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modalDate"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/modalContentDescription" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Post has 12 contributions"
+              android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+              android:layout_marginTop="16dp"
+              app:layout_constraintTop_toBottomOf="@+id/modalContentDescription"
+              app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+              android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+            android:src="@android:drawable/presence_offline"
+            android:layout_width="@dimen/default_indicator_margin_vertical"
+            android:layout_height="@dimen/default_indicator_margin_vertical"
+            android:id="@+id/dismissModalWindow" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,11 +27,10 @@ class AnnouncementItemRV(val fragment: Fragment) : Item<ViewHolder>() {
                 2 -> layout = R.layout.carousel_map
                 else -> R.layout.carousel_recommandation
             }
-
             fragment.layoutInflater.inflate(layout, null)
-
         }
         Glide.with(fragment).load(R.drawable.woman).apply(RequestOptions.circleCropTransform())
             .into(viewHolder.itemView.tabAnnouncementPhoto)
+
     }
 }

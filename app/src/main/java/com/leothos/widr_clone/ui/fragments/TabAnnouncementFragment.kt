@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.AnnouncementItemRV
@@ -42,6 +43,17 @@ class TabAnnouncementFragment : Fragment() {
         adapter.add(AnnouncementItemRV(this))
 
         recyclerview.adapter = adapter
+
+        adapter.setOnItemClickListener { item, view ->
+            Toast.makeText(context, "Test click", Toast.LENGTH_SHORT).show()
+            openModalSheet()
+        }
+    }
+
+    private fun openModalSheet() {
+        val modalFragment = ModalBottomFragment()
+        modalFragment.newInstance()
+            .show(childFragmentManager, "MODAL")
     }
 
 }
