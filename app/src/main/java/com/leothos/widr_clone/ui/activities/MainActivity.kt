@@ -1,9 +1,13 @@
 package com.leothos.widr_clone.ui.activities
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.ui.fragments.main_fragment.HeaderFragment
 import com.leothos.widr_clone.ui.fragments.main_fragment.MessageFragment
@@ -27,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     //****************
 
     private fun init() {
+
         configureFragmentContent(HeaderFragment())
         configureBottomNavigationView()
     }
@@ -36,10 +41,18 @@ class MainActivity : AppCompatActivity() {
     //****************
 
     private fun configureBottomNavigationView() {
+        addBadge()
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             updateFragments(menuItem.itemId)
         }
 
+    }
+
+    private fun addBadge() {
+        val menuView = bottomNavigationView.getChildAt(0) as BottomNavigationMenuView
+        val itemView: BottomNavigationItemView = menuView.getChildAt(3) as BottomNavigationItemView
+        val badge: View = LayoutInflater.from(this).inflate(R.layout.custom_badge_item, menuView, false)
+        itemView.addView(badge)
     }
 
     /**
@@ -63,6 +76,7 @@ class MainActivity : AppCompatActivity() {
      * The bottom navigation bar allow the user to select an item.
      * Each items display different contents. The parameter item referrers to the menu item ids
      * */
+
     private fun updateFragments(item: Int): Boolean {
         when (item) {
             R.id.action_header -> configureFragmentContent(HeaderFragment())

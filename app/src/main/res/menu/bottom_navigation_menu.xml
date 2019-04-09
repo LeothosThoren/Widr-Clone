@@ -3,31 +3,31 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
             android:id="@+id/action_header"
-            android:icon="@drawable/ic_person_outline_grey_24dp"
+            android:icon="@drawable/ic_thunderbolt"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_messages"
-            android:icon="@drawable/ic_person_outline_grey_24dp"
+            android:icon="@drawable/ic_message_bubble"
             app:labelVisibilityMode="unlabeled"
             android:title=""
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_add"
-            android:icon="@drawable/ic_person_outline_grey_24dp"
+            android:icon="@drawable/ic_blank"
             app:labelVisibilityMode="unlabeled"
             android:title=""
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_notification"
-            android:icon="@drawable/ic_person_outline_grey_24dp"
+            android:icon="@drawable/ic_notifications_bell_button"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>
     <item
             android:id="@+id/action_profil"
-            android:icon="@drawable/ic_person_outline_grey_24dp"
+            android:icon="@drawable/ic_user"
             android:title=""
             app:labelVisibilityMode="unlabeled"
             app:showAsAction="ifRoom"/>
