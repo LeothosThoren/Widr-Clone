@@ -11,8 +11,8 @@ import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.item_fragment_message.view.*
 
 class MessageItemRV(
-    private val messageItem: MessageItem,
-    private val fragment: Fragment
+    val messageItem: MessageItem,
+    val fragment: Fragment
 ) : Item<ViewHolder>() {
 
     override fun getLayout(): Int {
@@ -21,7 +21,7 @@ class MessageItemRV(
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.apply {
-            messageName.text = messageItem.name
+            chatUserName.text = messageItem.name
             messageComment.text = messageItem.comment
             messageCategory.text = messageItem.status
             messageDate.text = messageItem.date

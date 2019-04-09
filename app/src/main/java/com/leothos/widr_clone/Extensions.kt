@@ -23,4 +23,5 @@ fun Activity.setUpToolbar(toolbar: Toolbar) {
     this as AppCompatActivity
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayShowTitleEnabled(false)
+    supportActionBar?.setDisplayHomeAsUpEnabled(false)
 }

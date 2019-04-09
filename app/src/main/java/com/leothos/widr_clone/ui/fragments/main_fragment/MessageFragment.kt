@@ -1,6 +1,7 @@
 package com.leothos.widr_clone.ui.fragments.main_fragment
 
 
+import android.content.Intent
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
@@ -8,10 +9,12 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.leothos.widr_clone.EXTRA_INTENT_MESSAGE_ITEM
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.MessageItemRV
 import com.leothos.widr_clone.base.BaseFragment
 import com.leothos.widr_clone.data.DummyData
+import com.leothos.widr_clone.ui.activities.ChatActivity
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_message.*
@@ -44,6 +47,16 @@ class MessageFragment : BaseFragment() {
         }
         recyclerview.adapter = adapter
         recyclerview.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+
+        adapter.setOnItemClickListener { item, view ->
+            // Cast model into parcelable
+            val messageItem = item as MessageItemRV
+            val intent = Intent(context, ChatActivity::class.java)
+            // Add variable into parcelable intent in roder to retrieve data easily
+            intent.putExtra(EXTRA_INTENT_MESSAGE_ITEM, messageItem.messageItem)
+            // Start activity
+            startActivity(intent)
+        }
     }
 
 
