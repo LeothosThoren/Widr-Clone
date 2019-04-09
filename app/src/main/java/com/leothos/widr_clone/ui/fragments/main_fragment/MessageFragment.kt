@@ -13,7 +13,7 @@ import com.leothos.widr_clone.EXTRA_INTENT_MESSAGE_ITEM
 import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.MessageItemRV
 import com.leothos.widr_clone.base.BaseFragment
-import com.leothos.widr_clone.data.DummyData
+import com.leothos.widr_clone.data.DummyDataMessageList
 import com.leothos.widr_clone.ui.activities.ChatActivity
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.recycler_view_include.*
 
 class MessageFragment : BaseFragment() {
 
-    private val dummyData = DummyData.messageItem
+    private val dummyData = DummyDataMessageList.messageItem
     private val adapter = GroupAdapter<ViewHolder>()
 
     override fun getToolbar(): Toolbar {
@@ -35,9 +35,10 @@ class MessageFragment : BaseFragment() {
 
     override fun onResume() {
         super.onResume()
+        messageToolbar.title = "Messages"
         configureRecyclerView()
         Log.d("TAG", "${dummyData.size}")
-        messageToolbar.title = "Messages"
+
 
     }
 

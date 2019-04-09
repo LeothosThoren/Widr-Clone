@@ -16,7 +16,7 @@
 
     <!--Toolbar title appearance-->
     <style name="ToolbarTheme.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">36sp</item>
+        <item name="android:textSize">34sp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textAlignment">gravity</item>
     </style>
