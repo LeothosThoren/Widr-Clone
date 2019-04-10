@@ -9,4 +9,13 @@
     <dimen name="default_text_size">12sp</dimen>
     <dimen name="default_text_size_mini">8sp</dimen>
 
+
+    <dimen name="switch_thumb_radius">15dp</dimen>
+    <dimen name="switch_track_height">5dp</dimen>
+    <dimen name="switch_track_width">20dp</dimen>
+    <dimen name="switch_radius">50dp</dimen>
+    <dimen name="switch_selector_padding">0dp</dimen>
+    <dimen name="switch_selector_width">20dp</dimen>
+    <dimen name="switch_selector_height">20dp</dimen>
+
 </resources>

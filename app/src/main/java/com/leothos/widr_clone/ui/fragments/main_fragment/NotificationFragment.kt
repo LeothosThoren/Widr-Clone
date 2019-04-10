@@ -14,7 +14,8 @@ import com.leothos.widr_clone.R
 import com.leothos.widr_clone.adapters.NotificationItemRV
 import com.leothos.widr_clone.base.BaseFragment
 import com.leothos.widr_clone.data.DummyDataNotificationList
-import com.leothos.widr_clone.ui.RecyclerItemTouchHelper
+import com.leothos.widr_clone.formatTitle
+import com.leothos.widr_clone.utils.RecyclerItemTouchHelper
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.fragment_notification.*
@@ -38,7 +39,7 @@ class NotificationFragment : BaseFragment(), RecyclerItemTouchHelper.RecyclerIte
 
     override fun onResume() {
         super.onResume()
-        notificationToolbar.title = "Notifications"
+        notificationToolbar.title = context?.formatTitle(R.string.Settings)
         configureRecyclerView()
     }
 

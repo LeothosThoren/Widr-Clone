@@ -26,4 +26,9 @@
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <!-- Switch -->
+    <style name="SwitchCompatStyle" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/switch_selector</item>
+    </style>
+
 </resources>

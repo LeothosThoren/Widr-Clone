@@ -1,23 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-                                              xmlns:tools="http://schemas.android.com/tools"
-                                              android:layout_width="match_parent"
-                                              android:layout_height="match_parent"
-                                              tools:context=".ui.fragments.main_fragment.ProfileFragment">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/scrollView2">
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.constraintlayout.widget.ConstraintLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/toolbar"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height"
-            android:theme="@style/ToolbarTheme"
-            android:background="@drawable/gradient_green"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_profile_fragment"/>
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            tools:context=".ui.fragments.main_fragment.ProfileFragment">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profileToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:theme="@style/ToolbarTheme"
+                android:background="@drawable/gradient_green"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/profilePicture"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="@+id/profileToolbar"
+                android:layout_marginEnd="8dp"/>
+
+
+        <TextView
+                android:text="profile name"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileName"
+                app:layout_constraintTop_toBottomOf="@+id/profilePicture" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textAlignment="center"
+                android:layout_marginTop="4dp"/>
+
+        <!-- gift row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/custom_background_orange"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfileGift" app:layout_constraintTop_toBottomOf="@+id/profileName"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_orange_pale"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+                    android:id="@+id/profileRowIcon0"/>
+            <TextView
+                    android:text="Invite friends and get gifts and bonuses"
+                    android:layout_width="0dp"
+                    android:textColor="@color/orange"
+                    android:maxWidth="150dp"
+                    android:maxLines="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowInfo" app:layout_constraintStart_toEndOf="@+id/profileRowIcon0"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon0"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon0"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/orange"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow0" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- First row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/rectangle_layer_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfileNotification" app:layout_constraintTop_toBottomOf="@+id/rowProfileGift"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                    android:id="@+id/profileRowIcon1"/>
+            <TextView
+                    android:text="Manage notifications"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle1" app:layout_constraintStart_toEndOf="@+id/profileRowIcon1"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon1"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow1" android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textSize="18sp"/>
+            <TextView
+                    android:text="4 filters saved"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowSubText1" app:layout_constraintStart_toEndOf="@+id/profileRowIcon1"
+                    android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon1"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRowTitle1"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow1" android:layout_marginEnd="8dp"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow1" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Second Row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfilePremium"
+                app:layout_constraintTop_toBottomOf="@+id/rowProfileNotification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/rectangle_layer_bottom">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_trophy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                    android:id="@+id/profileRowIcon2"/>
+            <TextView
+                    android:text="Premium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle2" app:layout_constraintStart_toEndOf="@+id/profileRowIcon2"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon2"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow2" android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textSize="18sp"/>
+            <TextView
+                    android:text="You are using Free plan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowSubText2" app:layout_constraintStart_toEndOf="@+id/profileRowIcon2"
+                    android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon2"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRowTitle2"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow2" android:layout_marginEnd="8dp"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow2" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Third row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfilePosts"
+                app:layout_constraintTop_toBottomOf="@+id/rowProfilePremium"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/rectangle_layer_bottom">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_thunder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                    android:id="@+id/profileRowIcon3"/>
+            <TextView
+                    android:text="My posts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle3" app:layout_constraintStart_toEndOf="@+id/profileRowIcon3"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon3"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow3" android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textSize="18sp"/>
+            <TextView
+                    android:text="4 active . 12 achived"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowSubText3" app:layout_constraintStart_toEndOf="@+id/profileRowIcon3"
+                    android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon3"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRowTitle3"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow3" android:layout_marginEnd="8dp"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow3" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Fourth row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfileSentRecommendations"
+                app:layout_constraintTop_toBottomOf="@+id/rowProfilePosts"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/rectangle_layer_bottom">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_birthday_present"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                    android:id="@+id/profileRowIcon4"/>
+            <TextView
+                    android:text="Sent recommendations"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle4" app:layout_constraintStart_toEndOf="@+id/profileRowIcon4"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon4"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow4" android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textSize="18sp"/>
+            <TextView
+                    android:text="216 sent . 8 under review"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowSubText4" app:layout_constraintStart_toEndOf="@+id/profileRowIcon4"
+                    android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon4"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRowTitle4"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow4" android:layout_marginEnd="8dp"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow4" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Fifth row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfileContacts"
+                app:layout_constraintTop_toBottomOf="@+id/rowProfileSentRecommendations"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/rectangle_layer_bottom">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_user_shape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    android:id="@+id/profileRowIcon5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp" android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                    android:text="Contacts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle5" app:layout_constraintStart_toEndOf="@+id/profileRowIcon5"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon5"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow5" android:layout_marginEnd="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textSize="18sp"/>
+            <TextView
+                    android:text="248 contacts . 16 in Widr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowSubText5" app:layout_constraintStart_toEndOf="@+id/profileRowIcon5"
+                    android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon5"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRowTitle5"
+                    app:layout_constraintEnd_toStartOf="@+id/profileRowArrow5" android:layout_marginEnd="8dp"/>
+            <ImageView
+                    app:srcCompat="@drawable/ic_keyboard_arrow_right_24dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:layout_width="@dimen/default_indicator_margin_vertical"
+                    android:layout_height="@dimen/default_indicator_margin_vertical"
+                    android:id="@+id/profileRowArrow5" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Sixth row -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowProfileCall"
+                app:layout_constraintTop_toBottomOf="@+id/rowProfileContacts"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/rectangle_layer_bottom">
+
+            <ImageView
+                    app:srcCompat="@drawable/ic_telephone_handle_silhouette"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_background_blue_pale"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                    android:id="@+id/profileRowIcon6" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+            <TextView
+                    android:text="In-app Calls"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileRowTitle6" app:layout_constraintStart_toEndOf="@+id/profileRowIcon6"
+                    android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/profileRowIcon6"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/profileRowIcon6"
+                    android:layout_marginTop="8dp" android:textSize="18sp"/>
+
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SwitchCompatStyle"
+                    android:id="@+id/profileSwitch"
+                    android:track="@drawable/switch_track"
+                    android:checked="true"
+                    tools:checked="true"
+                    android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+                    android:thumb="@drawable/switch_selector"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

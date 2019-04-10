@@ -1,4 +1,4 @@
-package com.leothos.widr_clone.ui
+package com.leothos.widr_clone.utils
 
 import android.graphics.Canvas
 import androidx.recyclerview.widget.ItemTouchHelper
