@@ -25,8 +25,6 @@ class NotificationItemRV(
             notificationComment.text = notificationItem.notificationMessage
             Glide.with(fragment).load(notificationItem.urlPicture).apply(RequestOptions.circleCropTransform())
                 .into(notificationUserPicture)
-
         }
-
     }
 }
