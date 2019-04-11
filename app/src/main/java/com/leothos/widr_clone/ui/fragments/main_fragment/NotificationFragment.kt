@@ -80,12 +80,11 @@ class NotificationFragment : BaseFragment(), RecyclerItemTouchHelper.RecyclerIte
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int, position: Int) {
         // On swipe text color change and notify the recycler view the current change
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             viewHolder.itemView.notificationComment.setTextColor(resources.getColor(R.color.colorPrimaryDark, null))
             viewHolder.itemView.notificationDate.setTextColor(resources.getColor(R.color.colorPrimaryDark, null))
         } else {
-            viewHolder.itemView.notificationDate.setTextColor(resources.getColor(R.color.colorPrimaryDark))
+            viewHolder.itemView.notificationComment.setTextColor(resources.getColor(R.color.colorPrimaryDark))
             viewHolder.itemView.notificationDate.setTextColor(resources.getColor(R.color.colorPrimaryDark))
         }
 
